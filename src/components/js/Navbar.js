@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 // import {Routes,Route} from 'react-router-dom'
 
 import {Link} from 'react-router-dom';
-import './Navbar.css';
+import '../css/Navbar.css';
 
 export default function Navbar({ onRegisterClick }) {
   const [text, setText] = useState('');
@@ -26,11 +26,9 @@ export default function Navbar({ onRegisterClick }) {
   return (
     <div>
       <div className='Navbar-Links'>
-        <div className='Navbar-logo'>
-          Hello world
-        </div>
-        <Link className='button' to='/'>Login</Link> 
-        <a className='button' href="#" onClick={onRegisterClick}>Register</a>
+        <Link className='button' to='/'>Home</Link>
+        <Link className='button' to='/login'>Login</Link> 
+        <Link className='button' to='/register'>Register</Link>
       </div>
       <div className='Navbar-underline'></div>
       <div id='typing-heading' className='Navbar-colosseum'>

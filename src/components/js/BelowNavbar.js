@@ -1,7 +1,7 @@
 import React from 'react'
 // import Hackert from './Hackert.png'
-import aigenerated from './aigenerated.png';
-import './BelowNavbar.css';
+import aigenerated from '../assets/aigenerated.png';
+import '../css/BelowNavbar.css';
 
 export default function BelowNavbar() {
   return (

@@ -1,8 +1,9 @@
 import React from "react";
-import './Reg.css';
+import '../css/Reg.css';
+import {Link} from 'react-router-dom'
 function Reg() {
     return(
-        
+
         <div id="registration-section" className="body">
             <section>
             <div className="login-box">
@@ -47,7 +48,7 @@ function Reg() {
                 
                 <button type="submit">Submit</button>
                 <div className="register-link">
-                    <p>Already have an account? <a href="#">Login</a></p>
+                    <p>Already have an account? <Link to="/login">Login</Link></p>
                 </div>
                 </div>
                 </section>    

@@ -1,37 +1,34 @@
 import './App.css';
 import {Routes,Route} from 'react-router-dom';
-import BelowNavbar from './components/BelowNavbar';
-import Navbar from './components/Navbar';
-import Contact from './components/contact';
-import Reg from './components/reg';
+import BelowNavbar from './components/js/BelowNavbar';
+import Navbar from './components/js/Navbar';
+import Contact from './components/js/contact';
+import Reg from './components/js/reg';
+import Login from './components/js/login';
 
 
 
 function App() {
-  const scrollToRegistration = () => {
-    const registrationSection = document.getElementById('registration-section');
-    registrationSection.scrollIntoView({ behavior: 'smooth' });
-  };
+
   return (
 
-    // <div className="App">
-    //   <div className='Navbar-app-main'>
-    //     <Navbar/>
-    //   </div>    
-    //   <div className='Below-Navbar-app'> 
-    //     <BelowNavbar/>
-    //     <Contact/>
-    //   </div>
 
-    // </div>
     <>
-    <Navbar onRegisterClick={scrollToRegistration} />
-    <BelowNavbar/>
-    <Reg/>
-    <Contact/>
-      {/* <Routes>
-        <Route path='registration' element={<Regestration/>}/>
-      </Routes> */}
+    <Navbar />
+     <Routes>
+        <Route
+          path='/'
+          element={
+            <>
+              <BelowNavbar />
+              <Contact />
+            </>
+          }
+        />
+        <Route path='/register' element={<Reg />} />
+        <Route path='/login' element={<Login />}/>
+      </Routes>
+
     </>
   );
 }
